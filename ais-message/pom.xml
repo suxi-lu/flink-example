@@ -19,6 +19,40 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>dk.dma.ais.lib</groupId>
+            <artifactId>ais-lib-messages</artifactId>
+            <version>2.4</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>dk.dma.enav</groupId>
+                    <artifactId>enav-model</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>dk.dma.commons</groupId>
+                    <artifactId>dma-commons-util</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>dk.dma.enav</groupId>
+            <artifactId>enav-model</artifactId>
+            <version>0.6</version>
+        </dependency>
+        <dependency>
+            <groupId>dk.dma.commons</groupId>
+            <artifactId>dma-commons-util</artifactId>
+            <version>0.5</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>dk.dma.enav</groupId>
+                    <artifactId>enav-util</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <!-- Java Compiler -->
