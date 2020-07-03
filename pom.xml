@@ -12,47 +12,31 @@
     <modules>
         <module>example</module>
         <module>ais-message</module>
+        <module>spring-boot</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-        <flink-type>java</flink-type>
         <flink-version>1.10.0</flink-version>
-        <flink-sub-version>2.11</flink-sub-version>
-
-        <flink-kafka-version>0.10_2.11</flink-kafka-version>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.apache.flink</groupId>
-            <artifactId>flink-${flink-type}</artifactId>
-            <!--<scope>provided</scope>-->
-        </dependency>
-        <dependency>
-            <groupId>org.apache.flink</groupId>
-            <artifactId>flink-streaming-${flink-type}_${flink-sub-version}</artifactId>
-            <!--<scope>provided</scope>-->
-        </dependency>
-    </dependencies>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>org.apache.flink</groupId>
-                <artifactId>flink-${flink-type}</artifactId>
+                <artifactId>flink-java</artifactId>
                 <version>${flink-version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.flink</groupId>
-                <artifactId>flink-streaming-${flink-type}_${flink-sub-version}</artifactId>
+                <artifactId>flink-streaming-java_2.11</artifactId>
                 <version>${flink-version}</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.flink</groupId>
-                <artifactId>flink-connector-kafka-${flink-kafka-version}</artifactId>
+                <artifactId>flink-connector-kafka-0.10_2.11</artifactId>
                 <version>${flink-version}</version>
             </dependency>
         </dependencies>

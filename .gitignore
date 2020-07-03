@@ -34,3 +34,5 @@ package-lock.json
 overlays/
 build/
 classes/
+
+dependency-reduced-pom.xml
